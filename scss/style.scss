@@ -1,0 +1,337 @@
+@import 'normalize';
+@import 'awesome/fontawesome';
+@import "awesome/solid";
+@import "awesome/regular";
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto/roboto-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/Roboto/roboto-bold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: 'Century Gothic Bold';
+src: url('../fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff');
+font-weight: bold;
+font-style:normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Century Gothic Regular';
+src: url('../fonts/CenturyGothic/CenturyGothic.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'montserrat';
+src: url('../fonts/Montserrat/montserrat-regular-webfont.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'montserrat';
+src: url('../fonts/Montserrat/montserrat-bold-webfont.woff2') format('woff2');
+font-weight:bold;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'montserrat';
+src: url('../fonts/Montserrat/montserrat-italic-webfont.woff2') format('woff2');
+font-weight: normal;
+font-style: italic;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'ubuntu';
+src: url('../fonts/Ubuntu/ubuntu-regular-webfont.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+body{
+  background-color: #E3E9FF;
+  color:#696f85;
+  font-family: 'ubuntu';
+}
+.container {
+  margin: 0 auto;
+  max-width: 450px;
+  // border: 1px solid red;
+  padding: 10px;
+}
+.section{
+// background: linear-gradient(180deg, orange 60%, cyan);
+background-color: #fff;
+
+height: 100vw;
+}
+.todolist {
+  box-shadow: 0px 5px 10px 2px rgba(34,60,80,0.2);
+  &__header {
+    background-color: #c5cbdf;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 20px;
+    margin-bottom: 20px;
+    &-add{
+      display: flex;
+      // flex-wrap: wrap;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &__checkbox{
+    cursor: pointer;
+  }
+  &__deletebtn{
+    cursor: pointer;
+    &::before{
+      color: crimson;
+    }
+  }
+  &__title {
+    color: white;
+  }
+  &__body {
+    background-color: white;
+  }
+  &__add{
+    position: relative;
+    width: 100%;
+    // display: flex;
+    // flex-basis: 70%;
+    // width: 350px;
+
+  }
+  &__input{
+    outline: none;
+    border: solid 1px #ccc;
+    padding: 7px 0px 7px 7px;
+    // width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    transition: all .5s;
+    width: 100%;
+    // max-width: 240px;
+    &:focus{
+      background-color: #fff;
+    }
+  }
+  &__addbtn{
+    border: none;
+    height: 28px;
+    width: 40px;
+    position: absolute;
+    top:4px;
+    right: -8px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    &:focus, &:active{
+      background-color: #fff;
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+    &-color{
+      color: $color !important;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__mark {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border:1px blue solid;
+    align-self: center;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+  }
+  &__big-title{
+    margin: 0;
+    padding: 0 5px;
+    align-self: start;
+    
+  }
+  &__circle{
+      width: 10px;
+      height: 10px;
+      background-color: #E3E9FF;
+      border-radius: 50%;
+      align-self: center;
+      justify-self: center;
+    }
+  &__small-title{
+    font-size: 11px;
+    align-self: start;
+    padding:  0 5px;
+    padding-top: 3px;
+  }
+  &__time{
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 700;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 20px 20px minmax(100px, 1fr) 20px 0.2fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    padding: 6px;
+    border: #c5cbdf 1px solid;
+    border-radius: 50px;
+    // width: 100%;
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+    & div, & label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__text{
+      text-align: left;
+    }
+  &__add-task{
+    padding: 10px 30px 10px 50px;
+    background-color: #AF7EEB;
+    color: #fff;
+    border:none;
+    border-radius: 20px;
+  }
+  &__footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+  }
+  &__deletebtn{
+    cursor: pointer;
+  }
+  &__important,&__date{
+    // color: rgba(255, 255, 255, 0.8);
+    // font-weight: 400;
+    // background-color: #005aa3;
+    // border-color: #171718;
+    border:1px solid #af6f07;
+    // border:none;
+    // background-image: linear-gradient(120deg, #005aa3, #002544);
+    // box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 7px;
+    // text-transform: uppercase;
+    margin: 5px;
+  }
+  &__select{
+    background-color: #ffffff;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    padding: 10px 35px 10px 10px;
+    color: #2c3e50;
+    cursor: pointer;
+    border-radius: 5px;
+    &-wrap{
+      position: relative;
+      width: 140px;
+      margin-right: 10px;
+        &::after{
+          content: '\25BC';
+          position: absolute;
+          top: 7px;
+          right: 5px;
+          padding: 2px;
+          // background-color: #34495e;
+          transition: .25s all ease;
+          pointer-events: none;
+            &:hover{
+                color: #f39c12;
+              }
+          }
+        }
+  }
+}
+.fa-plus{
+  color: #fff;
+  margin-right: -35px;
+  z-index: 5;
+}
+
+.red{
+  background-color: rgb(197, 15, 15);
+  cursor: pointer;
+}
+.red:focus{
+  background: none;
+}
+.yellow{
+  background-color: rgb(245, 220, 0);
+}
+.green{
+  background-color: rgb(15, 197, 121);
+}
+
+.complited{
+  // text-decoration: line-through;
+  background-color: aliceblue;
+}
+
+.todolist__item.delition {
+    animation: opacity 1s ease-in-out;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.checked{
+  text-decoration: line-through;
+  // background-color: aliceblue;
+}
+
+.border{
+  border: 1px solid #0e8d5c;
+}

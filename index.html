@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>New ToDoList</title>
+</head>
+
+<body>
+  <section class="section">
+    <h1>ToDoList</h1>
+    <div class="container">
+      <article class="todolist">
+        <div class="todolist__header">
+          <h2 class="todolist__title">Write actions</h2>
+          <div class="todolist__header-add">
+            <!-- <select name="nameSelect" id="street" class="todolist__select">
+              <option value="Important">Important</option>
+              <option value="Middle">Middle</option>
+              <option value="Not urgent">Not eargen</option>
+            </select> -->
+            <div class="todolist__select-wrap">
+              <select class="todolist__select">
+                <option value="1" class="red">Important</option>
+                <option value="2" class="yellow">Middle</option>
+                <option value="3" class="green">Not eargen</option>
+              </select>
+            </div>
+            <!-- <div class="todolist__add">
+              <input type="text" name="input" class="todolist__input">
+              <input autofocus type="button" value="+" class="todolist__addbtn">
+            </div> -->
+            <div class="todolist__add">
+              <input name="s" placeholder="Add task..." type="text" autocomplete="off" class="todolist__input">
+              <button class="todolist__addbtn" type="button">&#43;</button>
+            </div>
+          </div>
+          <div class="todolist__filter-btn">
+            <button type="submit" class="todolist__important">По важности</button>
+            <button type="submit" class="todolist__date">По дате</button>
+          </div>
+        </div>
+        <div class="todolist__body">
+          <ul class="todolist__list">
+          </ul>
+        </div>
+        <!-- <div class="todolist__footer">
+          <i class="fas fa-plus"></i><input type="button" value="New Task" class="todolist__add-task">
+        </div> -->
+      </article>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

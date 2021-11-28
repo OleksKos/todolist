@@ -1,0 +1,11 @@
+@font-face {
+font-family: 'Century Gothic Regular';
+src: url('CenturyGothic.eot');
+src: url('CenturyGothic.eot?#iefix') format('embedded-opentype'),
+url('CenturyGothic.woff') format('woff'),
+url('CenturyGothic.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+.box-name {font-family: 'Century Gothic Regular';}

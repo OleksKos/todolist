@@ -1,0 +1,85 @@
+@media (max-width:1200px){
+  .container{
+    width: 90%;
+    padding: 10px;
+  }
+  .hero{
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex:1 1 auto;
+    padding-bottom:20px ;
+  }
+  
+
+  .inform,.hero{
+    flex-direction: column;
+  }
+  .inform{
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__data{
+      margin-right:0;
+      margin-bottom: 10px;
+    }
+    &__calendar{
+      margin-bottom: 15px;
+    }
+  }
+ 
+  .scheme__svg{
+    width:100%;
+    height: auto;
+  }
+
+
+  #street{
+    width: 100%;
+  }
+  .inform__street{
+    margin-right: 20px;
+  }
+}
+
+@media(max-width:800px) {
+  .humburger-menu{
+    display: flex;
+    z-index: 10;
+  }
+  .header{
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    &__login{
+      margin: 0;
+    }
+    &__nav{
+        position: absolute;
+        top:80px;
+        // left:0;
+        right: -200px;
+        background-color: #621402;
+        border-radius: 5px;
+        z-index: 12;
+        transition: all 0.5s ease-in-out;
+      &.menu-active {
+        right: 0px;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  .nav__items{
+    flex-direction: column;
+  }
+  .nav__item{
+    margin-bottom: 5px;
+  }
+}
+
+
+@media(max-width:500px) {
+    .inform__wrapper {
+      justify-content: start;
+    }
+  }
