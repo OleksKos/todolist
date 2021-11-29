@@ -6425,7 +6425,7 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  background-color: #E3E9FF;
+  background-color: #e3e9ff;
   color: #696f85;
   font-family: 'ubuntu';
 }
@@ -6502,17 +6502,24 @@ body {
 .todolist__add {
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .todolist__input {
   outline: none;
   border: solid 1px #ccc;
-  padding: 7px 0px 7px 7px;
+  padding: 7px;
   height: 25px;
-  border-radius: 5px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .todolist__input:focus {
@@ -6521,11 +6528,8 @@ body {
 
 .todolist__addbtn {
   border: none;
-  height: 28px;
+  height: 39px;
   width: 40px;
-  position: absolute;
-  top: 4px;
-  right: -8px;
   background: #fff;
   cursor: pointer;
   font-size: 30px;
@@ -6540,6 +6544,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   outline: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: -2px;
 }
 
 .todolist__addbtn:focus, .todolist__addbtn:active {
@@ -6599,7 +6606,7 @@ body {
 .todolist__circle {
   width: 10px;
   height: 10px;
-  background-color: #E3E9FF;
+  background-color: #e3e9ff;
   border-radius: 50%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -6640,7 +6647,8 @@ body {
   margin-bottom: 10px;
 }
 
-.todolist__item div, .todolist__item label {
+.todolist__item div,
+.todolist__item label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6658,7 +6666,7 @@ body {
 
 .todolist__add-task {
   padding: 10px 30px 10px 50px;
-  background-color: #AF7EEB;
+  background-color: #af7eeb;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -6714,8 +6722,8 @@ body {
   top: 7px;
   right: 5px;
   padding: 2px;
-  -webkit-transition: .25s all ease;
-  transition: .25s all ease;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
   pointer-events: none;
 }
 
