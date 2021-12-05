@@ -12,6 +12,9 @@ let num = [];
 let tasks;
 let complited, checkedItem, littleDesc, bigDesc;
 let numOfPoint;
+const searchInput = document.querySelector('.todolist__search');
+
+
 
 deskTaskInput.addEventListener('keyup', (e) => {
   // debugger;
@@ -93,6 +96,7 @@ const fillHtmlList = () => {
     todoItemElems = document.querySelectorAll('.todolist__item');
     todoItemCheckbox = document.querySelectorAll('.todolist__checkbox');
     todolistDeleteBtn = document.querySelectorAll('.todolist__deletebtn');
+    todoListTitle = document.querySelectorAll('.todolist__big-title');
 
     todoItemCheckbox.forEach(item => {
       for (let i = 0; i < num.length; i++) {
@@ -104,7 +108,6 @@ const fillHtmlList = () => {
 
     todolistDeleteBtn.forEach((item, index) => {
       item.addEventListener('click', () => {
-        // debugger
         tasks.splice(index, 1);
         num.splice(item.getAttribute("data-index"), 1);
         item.parentElement.classList.add('delition');
@@ -138,6 +141,21 @@ const fillHtmlList = () => {
 }
 
 fillHtmlList();
+let searchInputText;
+searchInput.addEventListener('input', () => {
+  searchInputText = searchInput.value.toLowerCase();
+  debugger;
+  todoListTitle.forEach(item => {
+    if (item.innerHTML.toLowerCase().includes(searchInputText)) {
+      item.parentElement.parentElement.classList.remove('hidden');
+      item.parentElement.parentElement.classList.add('nothidden');
+    } else {
+      item.parentElement.parentElement.classList.add('hidden');
+      item.parentElement.parentElement.classList.remove('nothidden');
+    }
+  })
+
+})
 
 // const date = '13:15';
 let date;

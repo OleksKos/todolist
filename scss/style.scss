@@ -102,6 +102,20 @@ body {
       margin-bottom: 20px;
     }
   }
+  &__filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__search {
+    outline: none;
+    border: solid 1px #ccc;
+    padding: 7px;
+    height: 25px;
+    transition: all 0.5s;
+    width: 100%;
+    border-radius: 5px;
+  }
   &__checkbox {
     cursor: pointer;
   }
@@ -341,4 +355,11 @@ body {
 
 .border {
   border: 1px solid #0e8d5c;
+}
+
+.nothidden {
+  display: auto;
+}
+.hidden {
+  display: none;
 }
